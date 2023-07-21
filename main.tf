@@ -1,5 +1,5 @@
 resource "jenkins_folder" "folders" {
-  count = length(var.folder)
+  count = length(var.folders)
   name = element(var.folders, count.index)
 }
 
