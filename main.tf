@@ -11,4 +11,8 @@ resource "jenkins_job" "job" {
     description = "Roboshop infrastructure job created",
     repo_rul = lookup(element(var.jobs, count.index), "repo_url", null)
   })
-}
+
+  lifecycle {
+    ignore_changes = [template]
+  }
+}     
