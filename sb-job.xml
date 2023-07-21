@@ -20,7 +20,7 @@
       <submoduleCfg class="empty-list"/>
       <extensions/>
     </scm>
-    <scriptPath>jenkinsfile-s</scriptPath>
+    <scriptPath>jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
