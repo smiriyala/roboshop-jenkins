@@ -20,6 +20,6 @@ data "aws_ssm_parameter" "jenkins_pass"{
     name = "jenkins.pass"
 }
 
-/* provider "aws" {
+provider "aws" {
     region = "us-east-1"
-} */
+}
