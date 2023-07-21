@@ -19,11 +19,11 @@ provider "jenkins"{
 }
 
 data "aws_ssm_parameter" "jenkins_user"{
-    name = "jenkins_user"
+    name = "jenkins.user"
 }
 
 data "aws_ssm_parameter" "jenkins_pass"{
-    name = "jenkins_pass"
+    name = "jenkins.pass"
 }
 
 provider "aws" {
