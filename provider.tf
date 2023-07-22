@@ -1,22 +1,22 @@
 terraform {
-    required_providers{
+    required_providers {
         jenkins = {
             source = "registry.terraform.io/taiidani/jenkins"
         }
     }
 }
 
-provider "jenkins"{
+provider "jenkins" {
     server_url = "http://52.2.35.11:8080"
     username = data.aws_ssm_parameter.jenkins_user.value
     password = data.aws_ssm_parameter.jenkins_pass.value
 }
 
-data "aws_ssm_parameter" "jenkins_user"{
+data "aws_ssm_parameter" "jenkins_user" {
     name = "jenkins.user"
 }
 
-data "aws_ssm_parameter" "jenkins_pass"{
+data "aws_ssm_parameter" "jenkins_pass" {
     name = "jenkins.pass"
 }
 
