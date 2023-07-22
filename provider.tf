@@ -7,7 +7,7 @@ terraform {
 }
 
 provider "jenkins" {
-    server_url = "http://44.211.67.125:8080"
+    server_url = "http://44.211.67.125:8080/"
     username = data.aws_ssm_parameter.jenkins_user.value
     password = data.aws_ssm_parameter.jenkins_pass.value
 }
@@ -23,4 +23,3 @@ data "aws_ssm_parameter" "jenkins_pass" {
 provider "aws" {
     region = "us-east-1"
 }
-http://44.211.67.125:8080/
