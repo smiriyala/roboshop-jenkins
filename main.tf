@@ -18,4 +18,19 @@ resource "jenkins_job" "job" {
   lifecycle {
     ignore_changes = [template]
   }
-}     
+}
+
+
+##These are defeult values place to create while JENKINS JOb Execution
+## Instead of IP address, we can use jenkins.devopsforyou.online route53 entry created. 
+data "aws_instance" "jenkins" {
+  instance_id = "i-0557339025abd2c67"
+}
+
+resource "aws_route53_record" "jenkins" {
+  zone_id = "Z034160419BHTFKQ5CIGO"
+  name    = "jenkins.devopsforyou.online"
+  type    = "A"
+  ttl     = 30
+  records = [data.aws_instance.jenkins.public_ip]
+}
