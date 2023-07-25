@@ -1,3 +1,6 @@
+#This tf file helps to create OTHER COmponent level JENKSING JOBS when you run master job in jenkins. 
+# Master job need to be created and pointing to this roboshop-jenkins repp.
+
 resource "jenkins_folder" "folders" {
   count = length(var.folders)
   name = element(var.folders, count.index)
