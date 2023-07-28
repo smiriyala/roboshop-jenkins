@@ -4,8 +4,7 @@ variable "folders" {
 
 variable "m-jobs"{
     default = [
-        { name = "roboshop", folder = "infra", repo_url = "https://github.com/smiriyala/roboshop-infra" },
-        
+    
         { name = "frontend", folder = "CI-Pipeline", repo_url = "https://github.com/smiriyala/frontend" },
         { name = "cart", folder = "CI-Pipeline", repo_url = "https://github.com/smiriyala/cart" },
         { name = "catalogue", folder = "CI-Pipeline", repo_url = "https://github.com/smiriyala/catalogue" },
@@ -18,7 +17,9 @@ variable "m-jobs"{
 }
 
 variable "s-jobs"{
-    default = []
+    default = [
+        { name = "roboshop", folder = "infra", repo_url = "https://github.com/smiriyala/roboshop-infra" }
+    ]
 }
 
 variable "force"{
