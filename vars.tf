@@ -16,9 +16,11 @@ variable "m-jobs"{
     ]
 }
 
+## filename variable used in main.tf to create template
 variable "s-jobs"{
     default = [
-        { name = "roboshop", folder = "infra", repo_url = "https://github.com/smiriyala/roboshop-infra" }
+        { name = "roboshop", folder = "infra", repo_url = "https://github.com/smiriyala/roboshop-infra" , filename="jenkinsfile" },
+        { name = "App-Deployment", folder = "infra", repo_url = "https://github.com/smiriyala/roboshop-ansible" , filename="jenkinsfile-deployment"  }
     ]
 }
 

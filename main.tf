@@ -13,10 +13,12 @@ resource "jenkins_job" "s-job" {
   name     = lookup(element(var.s-jobs, count.index), "name", null)
   folder   = "/job/${lookup(element(var.s-jobs, count.index), "folder", null)}"
   
+  ##These variable values are comming from varaible s-job
   template = templatefile("${path.module}/sb-job.xml", {
-    description = "Roboshop infrastructure job created",
+    description = "Roboshop infrastructure jobs created",
     repo_url = lookup(element(var.s-jobs, count.index), "repo_url", null)
     name = lookup(element(var.s-jobs, count.index), "name", null)
+    filename = lookup(element(var.s-jobs, count.index), "filename", null)
   })
 
   /* lifecycle {
