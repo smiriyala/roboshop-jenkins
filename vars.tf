@@ -21,6 +21,7 @@ variable "s-jobs"{
     default = [
         { name = "roboshop", folder = "infra", repo_url = "https://github.com/smiriyala/roboshop-infra" , filename="jenkinsfile" },
         { name = "App-Deployment", folder = "infra", repo_url = "https://github.com/smiriyala/roboshop-ansible" , filename="jenkinsfile-deployment"  }
+        { name = "App-Dep-Immutable", folder = "infra", repo_url = "https://github.com/smiriyala/roboshop-ansible" , filename="jenkinsfile-deploy-immutable"  }
     ]
 }
 
