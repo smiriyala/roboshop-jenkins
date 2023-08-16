@@ -12,6 +12,7 @@ variable "m-jobs"{
         { name = "shipping", folder = "CI-Pipeline", repo_url = "https://github.com/smiriyala/shipping" },
         { name = "payment", folder = "CI-Pipeline", repo_url = "https://github.com/smiriyala/payment" },
         { name = "dispatch", folder = "CI-Pipeline", repo_url = "https://github.com/smiriyala/dispatch" }
+        { name = "aws-ssh-param-store", folder = "CI-Pipeline", repo_url = "https://github.com/smiriyala/aws-ssm-param-store" }
   
     ]
 }
